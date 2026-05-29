@@ -1,0 +1,616 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>88 Noodle Bar — Cross Church Street, Huddersfield</title>
+<meta name="description" content="88 Noodle Bar. Chinese noodle bar at 15 Cross Church Street, Huddersfield HD1 2PY. Order online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0E0908;
+    --ink-soft:#1A100E;
+    --paper:#F4E8CC;
+    --paper-warm:#EADBB6;
+    --chilli:#C9351C;
+    --chilli-deep:#8E1F0E;
+    --gold:#E2B23B;
+    --rule:#3A2520;
+    --rhythm: clamp(.95rem, .62rem + .9vw, 1.05rem);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{ -webkit-text-size-adjust:100%; }
+  body{
+    background:var(--ink);
+    color:var(--paper);
+    font-family:"Manrope", system-ui, sans-serif;
+    font-weight:400;
+    font-size:var(--rhythm);
+    line-height:1.55;
+    overflow-x:hidden;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;pointer-events:none;z-index:50;
+    background-image:
+      radial-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
+      radial-gradient(rgba(0,0,0,.05) 1px, transparent 1px);
+    background-size: 3px 3px, 5px 5px;
+    background-position: 0 0, 1px 1px;
+    mix-blend-mode:overlay;
+  }
+  h1,h2,h3,h4{
+    font-family:"Bebas Neue", "Bebas Neue ExtraLight", Impact, sans-serif;
+    font-weight:400;
+    letter-spacing:.005em;
+    line-height:.86;
+    text-wrap:balance;
+  }
+  p{text-wrap:pretty;hyphens:auto}
+  a{color:inherit}
+  a.lnk{
+    position:relative;text-decoration:none;color:inherit;
+    background-image:linear-gradient(currentColor,currentColor);
+    background-size:100% 1px;background-repeat:no-repeat;background-position:0 100%;
+    transition:background-size .4s ease, color .3s ease;
+  }
+  a.lnk:hover{background-size:0 1px;color:var(--gold)}
+
+  /* ─── NAV ──────────────────────────────────────────────────────── */
+  .nav{
+    position:absolute;inset:0 0 auto 0;z-index:10;
+    display:flex;justify-content:space-between;align-items:center;
+    padding: 1.4rem clamp(1.2rem, 3vw, 2.6rem);
+    color:var(--paper);
+  }
+  .nav .mark{
+    font-family:"Bebas Neue", sans-serif;
+    font-size:1.3rem;letter-spacing:.18em;
+  }
+  .nav .meta{
+    display:flex;gap:1.5rem;font-size:.78rem;
+    letter-spacing:.18em;text-transform:uppercase;
+    font-weight:500;
+  }
+  .nav .meta .dot{color:var(--chilli)}
+  @media (max-width:640px){ .nav .meta{display:none} }
+
+  /* ─── HERO ─────────────────────────────────────────────────────── */
+  .hero{
+    position:relative;min-height:100svh;
+    background:var(--ink);
+    color:var(--paper);
+    overflow:hidden;
+    display:grid;
+    grid-template-rows: auto 1fr auto;
+  }
+  .hero__crown{
+    padding: 7.5rem clamp(1.2rem, 3vw, 2.6rem) 0;
+    display:flex;justify-content:space-between;align-items:flex-end;
+    gap:1.5rem;
+  }
+  .hero__crown p{
+    max-width:18ch;font-size:.86rem;
+    font-weight:500;letter-spacing:.08em;
+    line-height:1.45;
+    color:#C9B698;
+  }
+  .hero__crown .badge{
+    display:inline-block;
+    border:1px solid var(--paper);
+    padding:.35rem .65rem;
+    font-family:"Bebas Neue", sans-serif;
+    letter-spacing:.2em;font-size:.8rem;
+    color:var(--paper);
+  }
+  .hero__monogram{
+    position:relative;
+    display:grid;place-items:center;
+    padding: 0 clamp(1rem, 3vw, 2.5rem);
+  }
+  .hero__88{
+    font-family:"Bebas Neue", sans-serif;
+    font-size: clamp(14rem, 44vw, 36rem);
+    line-height:.78;
+    letter-spacing:-.04em;
+    color:var(--paper);
+    position:relative;
+    -webkit-text-stroke: 0;
+    text-shadow:
+      -2px 2px 0 var(--chilli-deep),
+      -4px 4px 0 var(--chilli),
+      0 0 60px rgba(226,178,59,.18);
+  }
+  .hero__88::after{
+    content:"";
+    position:absolute;left:50%;bottom:-1.2rem;transform:translateX(-50%);
+    width:8rem;height:1px;background:var(--gold);
+  }
+  .hero__base{
+    padding: 0 clamp(1.2rem, 3vw, 2.6rem) 2rem;
+    display:grid;grid-template-columns: 1fr 1fr;gap:2rem;align-items:end;
+  }
+  .hero__base p{
+    font-family:"Bebas Neue", sans-serif;
+    font-size: clamp(1.05rem, 1.6vw, 1.4rem);
+    letter-spacing:.18em;
+    line-height:1.1;
+  }
+  .hero__base .left{color:var(--paper)}
+  .hero__base .right{text-align:right;color:#C9B698}
+  .hero__base .right small{
+    display:block;
+    font-family:"Manrope", sans-serif;
+    font-size:.72rem;letter-spacing:.18em;
+    text-transform:uppercase;
+    color:#806A4E;margin-top:.4rem;font-weight:500;
+  }
+  @media (max-width:640px){
+    .hero__crown{padding-top:6rem}
+    .hero__base{grid-template-columns:1fr;gap:1rem}
+    .hero__base .right{text-align:left}
+  }
+
+  /* ─── MARQUEE ──────────────────────────────────────────────────── */
+  .marquee{
+    background:var(--chilli);color:var(--ink);
+    border-top:1px solid var(--ink);
+    border-bottom:1px solid var(--ink);
+    overflow:hidden;
+    padding: 1.1rem 0;
+    --speed: 38s;
+  }
+  .marquee__track{
+    display:inline-flex;gap:3.5rem;white-space:nowrap;
+    animation: m-scroll var(--speed) linear infinite;
+    will-change: transform;
+  }
+  .marquee span{
+    font-family:"Bebas Neue", sans-serif;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    letter-spacing:.12em;
+    display:inline-flex;align-items:center;gap:3.5rem;
+  }
+  .marquee span::after{
+    content:"✦";color:var(--gold);font-size:.7em;
+  }
+  @keyframes m-scroll{ to{ transform: translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce){
+    .marquee__track{animation:none;justify-content:center}
+  }
+
+  /* ─── SECTION BASE ─────────────────────────────────────────────── */
+  section{ padding: clamp(4rem, 8vw, 7rem) clamp(1.2rem, 4vw, 3rem); }
+  .container{ max-width: 76rem; margin: 0 auto; }
+  .eyebrow{
+    font-family:"Manrope", sans-serif;
+    font-size:.78rem;letter-spacing:.32em;
+    text-transform:uppercase;font-weight:500;
+    margin-bottom:1.2rem;
+  }
+  .h-display{
+    font-family:"Bebas Neue", sans-serif;
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height:.92;letter-spacing:.005em;
+  }
+  .lede{
+    font-size: clamp(1rem, 1.05vw + .9rem, 1.35rem);
+    max-width: 36ch;line-height:1.45;
+    font-weight:300;
+  }
+  @supports (animation-timeline: view()){
+    .rise{
+      animation: rise both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 30%;
+    }
+    @keyframes rise{
+      from{opacity:0;transform:translateY(2rem)}
+      to{opacity:1;transform:translateY(0)}
+    }
+  }
+
+  /* ─── STORY (cream slab) ───────────────────────────────────────── */
+  .story{
+    background:var(--paper);
+    color:var(--ink);
+  }
+  .story .container{
+    display:grid;grid-template-columns: 1fr 1.2fr;gap:clamp(2rem,5vw,5rem);
+    align-items:start;
+  }
+  .story .label{
+    font-family:"Bebas Neue", sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height:.9;color:var(--chilli-deep);
+    border-left:3px solid var(--chilli);
+    padding-left:1rem;
+  }
+  .story p + p{ margin-top:1.2rem; }
+  .story p{ font-size: clamp(1rem, .8vw + .9rem, 1.15rem); max-width:42ch; }
+  .story em{ color:var(--chilli-deep); font-style:normal; font-weight:700; }
+  @media (max-width:760px){
+    .story .container{grid-template-columns:1fr}
+    .story .label{border-left:0;border-top:3px solid var(--chilli);padding-left:0;padding-top:1rem}
+  }
+
+  /* ─── MENU (dark slab) ─────────────────────────────────────────── */
+  .menu{
+    background:var(--ink-soft);color:var(--paper);
+    position:relative;
+  }
+  .menu .container{ display:grid; gap:clamp(3rem,5vw,4rem); }
+  .menu__head{
+    display:grid;grid-template-columns: 1fr auto;gap:2rem;align-items:end;
+    padding-bottom:1.5rem;border-bottom:1px solid var(--rule);
+  }
+  .menu__head .h-display{ color:var(--paper); }
+  .menu__head p{
+    text-align:right;font-size:.85rem;letter-spacing:.04em;
+    max-width:28ch;color:#C9B698;
+  }
+  @media (max-width:640px){
+    .menu__head{grid-template-columns:1fr}
+    .menu__head p{text-align:left}
+  }
+  .menu__grid{
+    display:grid;grid-template-columns:repeat(2, minmax(0,1fr));
+    gap: clamp(2.5rem, 4vw, 4rem) clamp(2rem,5vw,5rem);
+  }
+  @media (max-width:760px){ .menu__grid{grid-template-columns:1fr} }
+  .menu__card h3{
+    font-family:"Bebas Neue", sans-serif;
+    font-size:clamp(2.1rem, 3vw, 2.8rem);
+    color:var(--gold);
+    margin-bottom:1.2rem;
+    display:flex;align-items:baseline;gap:1rem;
+  }
+  .menu__card h3::after{
+    content:"";flex:1;height:1px;
+    background:linear-gradient(to right, var(--rule), transparent);
+  }
+  .menu__card ul{ list-style:none; }
+  .menu__card li{
+    display:flex;justify-content:space-between;align-items:baseline;gap:1rem;
+    padding:.55rem 0;
+    border-bottom:1px dotted #3A2520;
+    font-size:1rem;
+    font-weight:300;
+  }
+  .menu__card li:last-child{border-bottom:0}
+  .menu__card li span{
+    color:#806A4E;font-size:.78rem;letter-spacing:.1em;
+    text-transform:uppercase;flex-shrink:0;
+  }
+  .menu__note{
+    margin-top:2rem;
+    padding:1.5rem;
+    border:1px dashed var(--rule);
+    font-size:.85rem;color:#C9B698;
+    max-width:48ch;
+    line-height:1.6;
+  }
+  .menu__note strong{ color:var(--gold);font-weight:700;letter-spacing:.05em }
+
+  /* ─── ORDER (chilli slab) ──────────────────────────────────────── */
+  .order{
+    background:var(--chilli);color:var(--ink);
+    text-align:center;
+    position:relative;overflow:hidden;
+  }
+  .order::before{
+    content:"88";
+    position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+    font-family:"Bebas Neue", sans-serif;
+    font-size: clamp(20rem, 50vw, 40rem);
+    color:rgba(14,9,8,.07);
+    line-height:1;letter-spacing:-.04em;
+    pointer-events:none;user-select:none;
+  }
+  .order .container{ position:relative; }
+  .order h2{
+    font-size: clamp(3.5rem, 9vw, 7.5rem);
+    line-height:.9;margin-bottom:1.5rem;
+  }
+  .order p{
+    max-width:34ch;margin:0 auto 2.2rem;font-size:1.05rem;
+    font-weight:400;
+  }
+  .order .cta{
+    display:inline-block;
+    background:var(--ink);color:var(--paper);
+    padding: 1.1rem 2.4rem;
+    font-family:"Bebas Neue", sans-serif;
+    font-size: 1.3rem;letter-spacing:.22em;
+    text-decoration:none;
+    border:1px solid var(--ink);
+    transition: background .25s ease, color .25s ease, transform .25s ease;
+  }
+  .order .cta:hover{
+    background:var(--paper);color:var(--ink);
+    transform: translateY(-2px);
+  }
+  .order .fineprint{
+    margin-top:1.5rem;font-size:.75rem;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--ink-soft);font-weight:500;
+  }
+
+  /* ─── VISIT (cream slab) ───────────────────────────────────────── */
+  .visit{
+    background:var(--paper);color:var(--ink);
+  }
+  .visit .container{
+    display:grid;grid-template-columns: 1.1fr 1fr;
+    gap:clamp(2.5rem,5vw,5rem);
+    align-items:end;
+  }
+  .visit h2{ font-size: clamp(3.5rem, 8vw, 6.5rem); color:var(--ink); margin-bottom:1.2rem; }
+  .visit .address{
+    font-family:"Bebas Neue", sans-serif;
+    font-size: clamp(1.5rem, 2.5vw, 2.1rem);
+    letter-spacing:.06em;line-height:1.1;
+    color:var(--chilli-deep);
+  }
+  .visit .address span{ display:block }
+  .visit .small{ font-size:.85rem;color:var(--ink);margin-top:1.2rem;max-width:38ch;line-height:1.6 }
+  .visit aside{
+    border-top:2px solid var(--ink);padding-top:1.5rem;
+  }
+  .visit aside dl{
+    display:grid;grid-template-columns: 8rem 1fr;gap:.6rem 1.2rem;
+    font-size:.92rem;
+  }
+  .visit aside dt{
+    font-family:"Bebas Neue", sans-serif;
+    letter-spacing:.16em;font-size:.95rem;color:var(--chilli-deep);
+  }
+  .visit aside dd{ font-weight:400 }
+  .visit aside .flag{
+    color:#806A4E;font-style:italic;font-weight:300;font-size:.85rem;
+  }
+  @media (max-width:760px){ .visit .container{grid-template-columns:1fr} }
+
+  /* ─── FOOTER ───────────────────────────────────────────────────── */
+  footer{
+    background:var(--ink);color:var(--paper);
+    padding: clamp(3rem,5vw,4rem) clamp(1.2rem,4vw,3rem) 2rem;
+    border-top:1px solid var(--rule);
+  }
+  footer .container{
+    display:grid;grid-template-columns: 1.4fr 1fr 1fr;
+    gap:2rem;
+  }
+  footer .mark{
+    font-family:"Bebas Neue", sans-serif;
+    font-size:clamp(3rem, 7vw, 5.5rem);
+    line-height:.9;letter-spacing:.005em;
+    color:var(--paper);
+  }
+  footer .mark small{
+    display:block;font-family:"Manrope", sans-serif;
+    font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;
+    color:#806A4E;margin-top:1rem;font-weight:500;
+  }
+  footer h4{
+    font-family:"Bebas Neue", sans-serif;font-size:1.1rem;
+    letter-spacing:.22em;color:var(--gold);margin-bottom:1rem;
+  }
+  footer p, footer li{
+    font-size:.88rem;line-height:1.7;color:#C9B698;
+    list-style:none;
+  }
+  footer ul{ list-style:none; }
+  footer .rule{
+    grid-column:1/-1;
+    height:1px;background:var(--rule);margin:2rem 0 1.5rem;
+  }
+  footer .colophon{
+    grid-column:1/-1;
+    display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;
+    font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;
+    color:#5C4A37;font-weight:500;
+  }
+  @media (max-width:760px){ footer .container{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+
+<!-- ──────── HERO ──────── -->
+<header class="hero">
+  <nav class="nav">
+    <div class="mark">八 · 八</div>
+    <div class="meta">
+      <span>Huddersfield HD1</span>
+      <span class="dot">●</span>
+      <span>Noodles · Rice · Sweet & Sour</span>
+    </div>
+  </nav>
+
+  <div class="hero__crown">
+    <span class="badge">Cross Church St.</span>
+    <p>An auspicious number above a Cantonese kitchen — opposite Huddersfield Parish Church.</p>
+  </div>
+
+  <div class="hero__monogram">
+    <div class="hero__88" aria-label="88">88</div>
+  </div>
+
+  <div class="hero__base">
+    <p class="left">Noodle bar<br>Est. Huddersfield</p>
+    <p class="right">
+      Doubled prosperity<br>
+      <small>八八 · bā bā</small>
+    </p>
+  </div>
+</header>
+
+<!-- ──────── MARQUEE ──────── -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>Rice Dishes</span>
+    <span>Sweet &amp; Sour</span>
+    <span>Side Orders</span>
+    <span>Cantonese Kitchen</span>
+    <span>Eat-in &amp; Takeaway</span>
+    <span>Order on Just Eat</span>
+    <span>Cross Church Street</span>
+    <span>HD1 2PY</span>
+    <!-- duplicate for seamless loop -->
+    <span>Rice Dishes</span>
+    <span>Sweet &amp; Sour</span>
+    <span>Side Orders</span>
+    <span>Cantonese Kitchen</span>
+    <span>Eat-in &amp; Takeaway</span>
+    <span>Order on Just Eat</span>
+    <span>Cross Church Street</span>
+    <span>HD1 2PY</span>
+  </div>
+</div>
+
+<!-- ──────── STORY ──────── -->
+<section class="story">
+  <div class="container">
+    <div class="label rise">
+      Why<br>eighty<br>eight.
+    </div>
+    <div class="rise">
+      <p>In Cantonese the number eight sounds like <em>fā</em> — to prosper. Double it, and you have <em>fā fā</em>: prosperity, twice over. It's a number written above market stalls in Hong Kong and slipped onto licence plates in Kowloon. It's a wish, set in numerals.</p>
+      <p>We took the number for the noodle bar on Cross Church Street, opposite the parish church, in the middle of Huddersfield. A short Cantonese menu — noodles, rice, sweet and sour, side orders — cooked to order, sent out for takeaway, or eaten in at the counter.</p>
+      <p>Two digits. One kitchen. Open through the evening.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ──────── MENU ──────── -->
+<section class="menu">
+  <div class="container">
+    <div class="menu__head rise">
+      <h2 class="h-display">The kitchen</h2>
+      <p>A short Cantonese menu — see the full list and current prices on Just Eat.</p>
+    </div>
+
+    <div class="menu__grid">
+
+      <div class="menu__card rise">
+        <h3>Rice</h3>
+        <ul>
+          <li>Egg fried rice <span>House</span></li>
+          <li>Chicken fried rice <span>Wok</span></li>
+          <li>Special fried rice <span>Mixed</span></li>
+          <li>King prawn fried rice <span>Sea</span></li>
+          <li>Beef fried rice <span>Wok</span></li>
+          <li>Plain boiled rice <span>Side</span></li>
+        </ul>
+      </div>
+
+      <div class="menu__card rise">
+        <h3>Sweet &amp; Sour</h3>
+        <ul>
+          <li>Sweet &amp; sour chicken <span>Cantonese</span></li>
+          <li>Sweet &amp; sour pork <span>Cantonese</span></li>
+          <li>Sweet &amp; sour king prawn <span>Sea</span></li>
+          <li>Sweet &amp; sour mixed <span>Combo</span></li>
+        </ul>
+      </div>
+
+      <div class="menu__card rise">
+        <h3>Noodles</h3>
+        <ul>
+          <li>Chow mein — chicken <span>Soft</span></li>
+          <li>Chow mein — beef <span>Soft</span></li>
+          <li>Chow mein — king prawn <span>Sea</span></li>
+          <li>Chow mein — house special <span>Mixed</span></li>
+          <li>Singapore fried noodles <span>Spiced</span></li>
+        </ul>
+      </div>
+
+      <div class="menu__card rise">
+        <h3>Sides</h3>
+        <ul>
+          <li>Spring rolls <span>2 pcs</span></li>
+          <li>Salt &amp; pepper chips <span>Crisp</span></li>
+          <li>Crispy seaweed <span>House</span></li>
+          <li>Prawn crackers <span>Bag</span></li>
+          <li>Curry sauce <span>Pot</span></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="menu__note rise">
+      <strong>Note</strong> · prices, allergens and the full live menu are kept up-to-date on the Just Eat order page. The list above is a representative sample of categories served — order through the link below for current items and pricing.
+    </div>
+  </div>
+</section>
+
+<!-- ──────── ORDER CTA ──────── -->
+<section class="order">
+  <div class="container">
+    <h2 class="rise">Order tonight.</h2>
+    <p class="rise">Delivery and collection through Just Eat — the live menu, the live prices, and the kitchen's current opening window.</p>
+    <a class="cta" href="https://www.just-eat.co.uk/restaurants-88noodlebar-hd1/menu" target="_blank" rel="noopener">Order on Just Eat →</a>
+    <div class="fineprint">15 Cross Church Street · HD1 2PY</div>
+  </div>
+</section>
+
+<!-- ──────── VISIT ──────── -->
+<section class="visit">
+  <div class="container">
+    <div class="rise">
+      <h2>Find us.</h2>
+      <p class="address">
+        <span>15 Cross Church Street</span>
+        <span>Huddersfield</span>
+        <span>HD1 2PY</span>
+      </p>
+      <p class="small">A short walk from Kingsgate Centre and Huddersfield Bus Station. Opposite the parish church on the corner of Cross Church Street and Lord Street.</p>
+    </div>
+    <aside class="rise">
+      <dl>
+        <dt>Order</dt>
+        <dd><a class="lnk" href="https://www.just-eat.co.uk/restaurants-88noodlebar-hd1/menu" target="_blank" rel="noopener">Just Eat — live menu</a></dd>
+        <dt>Hours</dt>
+        <dd class="flag">See Just Eat for current opening times.</dd>
+        <dt>Phone</dt>
+        <dd class="flag">Best reached via Just Eat order line.</dd>
+        <dt>Map</dt>
+        <dd><a class="lnk" href="https://www.google.com/maps/search/?api=1&query=15+Cross+Church+Street+Huddersfield+HD1+2PY" target="_blank" rel="noopener">Open in Google Maps</a></dd>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<!-- ──────── FOOTER ──────── -->
+<footer>
+  <div class="container">
+
+    <div>
+      <div class="mark">88<small>Noodle Bar · Huddersfield</small></div>
+    </div>
+
+    <div>
+      <h4>Address</h4>
+      <p>15 Cross Church Street<br>Huddersfield<br>HD1 2PY</p>
+    </div>
+
+    <div>
+      <h4>Order</h4>
+      <ul>
+        <li><a class="lnk" href="https://www.just-eat.co.uk/restaurants-88noodlebar-hd1/menu" target="_blank" rel="noopener">Just Eat — 88 Noodle Bar</a></li>
+      </ul>
+    </div>
+
+    <div class="rule"></div>
+
+    <div class="colophon">
+      <span>八八 · bā bā · doubled prosperity</span>
+      <span>© 88 Noodle Bar · Huddersfield HD1</span>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
